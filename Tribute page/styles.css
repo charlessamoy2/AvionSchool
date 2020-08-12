@@ -1,0 +1,91 @@
+body,html{
+    width:100%;
+    background-color: black;
+}
+
+h2{
+    text-align:center;
+}
+
+li{
+    padding-top:8px;
+}
+
+#main{
+    height: 100%;
+    justify-content: center;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    color: rgb(240, 240, 240)
+}
+#title{
+    font-size: 72px;
+    width:auto;
+    text-align: center;
+    display:block;
+    color: rgb(190, 155, 64);
+    padding:25px;
+}
+
+#img-div{
+    width:100%;
+    max-width:800px;
+    height:auto;
+    margin:auto;
+    padding:15px;
+    border-width: 10px;
+    border-color: rgb(190, 155, 64);
+    border-style: groove;
+    background-color: rgb(29, 29, 29);
+}
+
+#image{
+        width:100%;
+        max-width:790px;
+        margin:auto;
+        display:block;
+        display:block;
+    }
+
+#img-caption{
+    font-size:12px;
+    text-align:center;
+    max-width:500px;
+    padding-top: 10px;
+    margin:auto;
+    display:block;
+}
+
+#tribute-info{
+    font-size:16px;
+    width:100%;
+    height:auto;
+    max-width:725px;
+    margin:auto;
+    padding-top:25px;
+    padding-bottom:1px;
+    display:block;
+}
+
+#tribute-link{
+    text-align:center;
+    height:100%;
+    margin:auto;
+    display:block;
+}
+
+a:link{
+    color: rgb(167, 167, 167);
+}
+
+a:visited{
+    color: rgb(190, 155, 64);
+}
+
+a:hover{
+    color: red;
+}
