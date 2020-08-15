@@ -10,7 +10,7 @@
         }
 
         h1 {
-            font-size: 120px;
+            font-size: 120%;
         }
 
         #navigation {
@@ -21,15 +21,31 @@
         li a {
             text-decoration: none;
         }
+
+        .warning{
+            font-weight: bold;
+        }
+
+        strong {
+            text-decoration: underline;
+        }
+
+        div>strong{
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <h1>TEST</h1>
     <p>Lorem ipsum dolor <a href="https://youtube.com">Youtube</a>, sit amet consectetur adipisicing elit. Iusto molestiae ea dolores ut sit nemo nisi sint natus. Animi molestiae inventore veniam quos est sunt rerum nisi veritatis. Tenetur, consectetur!</p>
-    <ul id="navigation">
+    <ul id="navigation" class="warning">
         <li><a href="https://youtube.com">Apple</a></li>
         <li><a href="https://youtube.com">Banana</a></li>
         <li><a href="https://youtube.com">Cherries</a></li>
     </ul>
+    Lorem ipsum dolor <strong>sit amet</strong>.
+    <div>
+        Lorem ipsum dolor <strong>sit amet</strong>.
+    </div>
 </body>
 </html>

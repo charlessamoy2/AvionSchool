@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,400&display=swap');
+
+/* declare general styles */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background: #585c68;
+    font-size:14px;
+    line-height:22px;
+    color: rgb(224, 224, 3);
+}
+
+.bold{
+    font-weight:700;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.semi-bold{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.data>a{
+    color:yellow;
+}
+
+/* end of declare general styles */
+
+/* declare size and center the whole resume form */
+.resume{
+    width: 800px;
+    height: auto;
+    display: flex;
+    margin: 50px auto;
+}
+
+.resume .title {
+    margin-bottom: 10px;
+}
+
+/* all ends of section have no border at the bottom (less space less confusing to code) */
+.resume .resume_left .resume_item:last-child,
+.resume .resume_right .resume_item:last-child {
+  border-bottom: 0px;
+}
+/* start of resume left */
+
+.resume .resume_left{
+    width:300px;
+    background: black;
+}
+
+/*start of general resume left content*/
+.resume .resume_left .resume_content{
+    padding: 0 25px;
+}
+
+.resume .resume_left .bold {
+    color: gold;
+}
+
+.resume .resume_left .regular {
+    color: gold;
+}
+
+.resume .resume_left ul li {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.resume .resume_left ul li .icon {
+    width: 10%;
+    height: auto;
+    margin-right: 15px;
+}
+
+.resume .resume_left .resume_info ul li .data{
+    width: 100%;
+}
+
+/*end of general resume left styles*/
+
+/*start of resume profile styles*/
+
+.resume .resume_left .resume_profile{
+    width:100%;
+    height:auto;
+}
+
+.resume .resume_left .resume_profile img{
+    width:100%;
+    height:100%;
+    padding: 25px 25px;
+}
+
+/*end of resume profile styles */
+
+/*start of resume skills*/
+.resume .resume_left .resume_skills ul li {
+    display: flex;
+    margin-bottom: 10px;
+    color: yellow;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*declare width of skill labels to uniform them*/
+.resume .resume_left .resume_skills ul li .skill_name {
+    width: 25%;
+}
+
+/* make fake boxes to "make" progress bars*/
+.resume .resume_left .resume_skills ul li .skill_progress {
+    width: 60%;
+    margin: 0 5px;
+    height: 5px;
+    background: rgb(73, 73, 73);
+    position: relative;
+}
+
+/*declare width of skill percent labels to uniform them*/
+.resume .resume_left .resume_skills ul li .skill_per {
+    width: 15%;
+}
+
+/* same with fake boxes for progress bars but this is to fill it up*/
+.resume .resume_left .resume_skills ul li .skill_progress span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgb(231, 197, 3);
+}
+
+/*end of resume skills*/
+
+/*start of resume socials*/
+.resume .resume_left .resume_social ul li .data{
+    width: 25%;
+}
+
+/*uniform icon sizes make smaller than what's used before*/
+.resume .resume_left .resume_social ul li .icon {
+    width: 10%;
+}
+
+/*add margins to create spacing. turn yellow*/
+.resume .resume_left .resume_social .semi-bold {
+    color: yellow;
+    margin-bottom: 3px;
+}
+/*end of resume socials*/
+/* end of resume left */
+
+/* start of resume right */
+.resume .resume_right {
+    width: 550px;
+    background: rgb(24, 24, 24);
+    padding: 25px;
+}
+
+/*general resume right styling*/
+.resume_about p{
+    color: yellow;
+    margin-bottom: 10px;
+}
+
+.resume .resume_right ul li {
+    position: relative;
+}
+
+.resume .resume_right ul li .date {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.resume .resume_right .bold {
+    color: rgb(231, 197, 3);
+}
+
+.resume_right .title {
+    margin-bottom:10px;
+}
+
+.resume .resume_right ul li .info {
+    margin-bottom: 20px;
+}
+
+/*create margin bellow each last item of a list*/
+.resume .resume_right ul li:last-child .info {
+    margin-bottom: 10px;
+}
+/*end of general resume right styling*/
+
+/* start of work and education */
+
+/*add padding for indent. hide any "sobra"*/
+.resume .resume_right .resume_work ul,
+.resume .resume_right .resume_education ul {
+  padding-left: 40px;
+  overflow: hidden;
+}
+
+/*create fake circle to make dots in resume*/
+.resume .resume_right .resume_work ul li:before,
+.resume .resume_right .resume_education ul li:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -25px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 2px solid yellow;
+}
+
+/*make fake lines to connect dots (purely aesthetic)*/
+.resume .resume_right .resume_work ul li:after,
+.resume .resume_right .resume_education ul li:after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: -21px;
+  width: 2px;
+  height: 115px;
+  background: yellow;
+}
+
+/* end of work and education */
+
+/* start of resume hobbies */
+
+.resume .resume_right .resume_hobby ul li i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.resume .resume_right .resume_hobby ul {
+    display: flex;
+    justify-content: space-between;
+}
+  
+/*circles for hobbies */
+.resume .resume_right .resume_hobby ul li {
+    width: 80px;
+    height: 80px;
+    border: 2px solid yellow;
+    border-radius: 50%;
+    position: relative;
+    color: yellow;
+}
+  
+.resume .resume_right .resume_hobby ul li i {
+    font-size: 30px;
+}
+
+/*line for hobbies */
+.resume .resume_right .resume_hobby ul li:before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: -52px;
+    width: 50px;
+    height: 2px;
+    background: yellow;
+}
+  
+.resume .resume_right .resume_hobby ul li:last-child:before {
+    display: none;
+}
+
+/* end of resume hobbies */
+/* end of resume right */

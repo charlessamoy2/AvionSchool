@@ -1,24 +1,48 @@
 <!DOCTYPE html>
-<html style="background-color:rgb(175, 231, 231);">
+<html>
     <head>
         <title>Charles' Resume</title>
         <style type="text/css">
-            * {
+            html {
+                background-color:rgb(175, 231, 231);
                 font-family: verdana, arial, sans-serif;
             }
 
-            #information div {
+            #header{
+                background-color:rgb(73, 73, 212);
+                color: white;
+            }
+
+            #main{
+                background-color:white; 
+                margin:auto; 
+                max-width: 80%;
+            }
+
+            .vcard,#header{
+                padding: 10px;
+            }
+
+            .vcard img{
+                width:100px; 
+                height:auto;
+            }
+            
+            
+            .content div {
                 border: 1px solid black;
+                margin:5px;
+                padding:10px;
             }
         </style>
     </head>
     <body>
-        <div style="background-color:white; margin:auto; max-width: 80%;">
-            <div id="header" style="background-color:pink">
+        <div id="main">
+            <div id="header">
                 <h1>Resume</h1>
             </div>
             <div class="vcard" id="contactinfo">
-                <img src="idpicture.jpg" alt="Charles Samoy" style="width:100px; height:auto" />
+                <img src="idpicture.jpg" alt="Charles Samoy"/>
                 <div class="fn n"><h1>Charles Samoy</h1></div>
                 <div class="tel">09175066332</div>
                 <div class="email">charlessamoy@gmail.com</div>
@@ -30,7 +54,7 @@
                 </div>
                 <hr>
             </div>
-            <div id="information">
+            <div class="content">
                 <div id="socialmedia">
                     <h2>Social Media Accounts</h2>
                     <ul>
@@ -51,27 +75,27 @@
                 </div>
                 <div id="experience">
                     <h2>Work Experience</h2>
-                    <div id="akads">
+                    <span id="akads">
                         <h3>AKADS PH</h3>
                         <h4>Co-Founder</h4>
                         <p>Aug 2018 - Present</p>
-                    </div>
-                    <div id ="soulcone">
+                    </span>
+                    <span id ="soulcone">
                         <h3>Soul Cone</h3>
                         <h4>Co-Founder</h4>
                         <p>May 2018 - May 2019</p>
-                    </div>
-                    <div id="freelance">
+                    </span>
+                    <span id="freelance">
                         <h3>DJ and Audio Engineer (Live and Studio)</h3>
                         <h4>Freelance</h4>
                         <p>2015 - Present <br></p>
                         <p>I have done live events like VIBE PH, World of Dance, Hip-hop International, NBA Meetup for Collin Sexton etc.</p>
-                    </div>
-                    <div id="maca">
+                    </span>
+                    <span id="maca">
                         <h3>Ateneo Management of Applied Chemistry Association</h3>
                         <h4>Chief Financial Officer</h4>
                         <p>2019-2020</p>
-                    </div>
+                    </span>
                 </div>
                 <div id="education">
                     <h2>Education</h2>
