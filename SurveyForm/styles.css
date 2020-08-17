@@ -1,0 +1,25 @@
+.main {
+    text-align: center;
+    width: 75%;
+    margin: auto;
+    height: auto;
+}
+
+label {
+    display: inline-block;
+    text-align: left;
+    width: 140px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input {
+    text-align: center;
+}
+
+form {
+    background-color: blue;
+    width: 50%;
+    margin: auto;
+    height: auto;
+}

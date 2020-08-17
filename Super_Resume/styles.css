@@ -48,7 +48,7 @@ body{
 /* all ends of section have no border at the bottom (less space less confusing to code) */
 .resume .resume_left .resume_item:last-child,
 .resume .resume_right .resume_item:last-child {
-  border-bottom: 0px;
+    border-bottom: 0px;
 }
 /* start of resume left */
 
@@ -162,7 +162,7 @@ body{
 
 /* start of resume right */
 .resume .resume_right {
-    width: 550px;
+    width: 500px;
     background: rgb(24, 24, 24);
     padding: 25px;
 }
