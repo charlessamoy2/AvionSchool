@@ -1,0 +1,86 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* the side navigation menu */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  .sidebar h2 {
+      text-align: center;
+  }
+  /* sidebar links */
+  .sidebar a {
+    display: block;
+    color: black;
+    border-bottom: 1px solid darkgrey;
+    padding: 16px;
+    text-decoration: none;
+    text-align: justify;
+  }
+  /* Active/current links */
+  .sidebar a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  /* links on mouse-over */
+  .sidebar a:hover {
+    cursor: pointer;
+  }
+  .sidebar a:hover:not(.active) {
+    background-color: rgba(184, 183, 183, 0.473);
+    color: black;
+  }
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+    margin-left: 300px;
+    padding: 15px 20px;
+    height: 100%;
+  }
+
+  .content h1{
+    padding: 0px 0px 20px 15px;
+    border-bottom: 1px darkgrey solid;
+  }
+
+  .description {
+      padding: 0px 25px;
+      text-align: justify;
+      line-height: 30px;
+  }
+
+  .description ul li:not(:last-child){
+      margin-bottom: 20px;
+  }
+
+  #code {
+      font-size: 14px;
+      line-height: normal;
+      background-color: rgb(212, 212, 212);
+      border: 2px solid grey;
+      padding: 10px;
+  }
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
