@@ -1,0 +1,16 @@
+.flex-container{
+    display:flex;
+    flex-flow: row wrap-reverse;
+}
+
+.flex-item {
+    background-color:tomato;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+    padding:5px;
+    width:100px;
+    line-height:75px;
+}
