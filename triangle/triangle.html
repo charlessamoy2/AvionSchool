@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        // var x=rows-1;
+        // for(var i=1;i<=rows;i++)
+        // {
+        //     for (var c = 1;c<=x;c++)
+        //         document.write(" &nbsp");
+        //         x--;
+
+        //     for(c=1;c<=2*i-1;c++)
+        //         document.write("*");
+                
+        //     document.write("<br>");
+        // }
+        // x=1;
+
+        // for(i=1;i<=rows-1;i++)
+        // {
+        //     for(c=1;c<=x;c++) 
+        //         document.write(" &nbsp");
+        //         x++;
+            
+        //     for(c=1;c<=2*(rows-i)-1;c++)
+        //         document.write("*");
+            
+        //     document.write("<br>");
+        // }
+        var rows = 10;
+        let i = 1;
+        let j = 1;
+        while (i<=rows)
+        {
+            while(j<=i)
+            {
+                document.write("*");
+                j++;
+            }
+            document.write("<br/>");
+            i++;
+            j = 1;
+        }
+        
+    </script>
+    <title>triangle stuff</title>
+</head>
+<body>
+</body>
+</html>

@@ -13,7 +13,7 @@ body{
     background: #585c68;
     font-size:14px;
     line-height:22px;
-    color: rgb(224, 224, 3);
+    color: #908391(224, 224, 3);
 }
 
 .bold{
@@ -28,7 +28,7 @@ body{
 }
 
 .data>a{
-    color:yellow;
+    color:#B55EB4;
 }
 
 /* end of declare general styles */
@@ -54,7 +54,7 @@ body{
 
 .resume .resume_left{
     width:300px;
-    background: black;
+    background: #1E1926;
 }
 
 /*start of general resume left content*/
@@ -63,24 +63,28 @@ body{
 }
 
 .resume .resume_left .bold {
-    color: gold;
+    color: #95519E;
 }
 
 .resume .resume_left .regular {
-    color: gold;
+    color: #B55EB4;
 }
 
 .resume .resume_left ul li {
     display: flex;
     margin-bottom: 10px;
     align-items: center;
+    color: #B55EB4;
 }
 
 .resume .resume_left ul li .icon {
     width: 10%;
     height: auto;
     margin-right: 15px;
+    color: #B55EB4;
 }
+
+
 
 .resume .resume_left .resume_info ul li .data{
     width: 100%;
@@ -107,7 +111,7 @@ body{
 .resume .resume_left .resume_skills ul li {
     display: flex;
     margin-bottom: 10px;
-    color: yellow;
+    color: #B55EB4;
     justify-content: space-between;
     align-items: center;
 }
@@ -122,7 +126,7 @@ body{
     width: 60%;
     margin: 0 5px;
     height: 5px;
-    background: rgb(73, 73, 73);
+    background: #908391;
     position: relative;
 }
 
@@ -137,7 +141,7 @@ body{
     top: 0;
     left: 0;
     height: 100%;
-    background: rgb(231, 197, 3);
+    background: #B55EB4;
 }
 
 /*end of resume skills*/
@@ -154,7 +158,7 @@ body{
 
 /*add margins to create spacing. turn yellow*/
 .resume .resume_left .resume_social .semi-bold {
-    color: yellow;
+    color: #B55EB4;
     margin-bottom: 3px;
 }
 /*end of resume socials*/
@@ -162,14 +166,13 @@ body{
 
 /* start of resume right */
 .resume .resume_right {
-    width: 500px;
-    background: rgb(24, 24, 24);
+    width: 550px;
+    background: #F2EBE4;
     padding: 25px;
 }
 
 /*general resume right styling*/
 .resume_about p{
-    color: yellow;
     margin-bottom: 10px;
 }
 
@@ -184,7 +187,7 @@ body{
 }
 
 .resume .resume_right .bold {
-    color: rgb(231, 197, 3);
+    color: #95519E;
 }
 
 .resume_right .title {
@@ -220,7 +223,7 @@ body{
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  border: 2px solid yellow;
+  border: 2px solid #B55EB4;
 }
 
 /*make fake lines to connect dots (purely aesthetic)*/
@@ -232,7 +235,7 @@ body{
   left: -21px;
   width: 2px;
   height: 115px;
-  background: yellow;
+  background: #B55EB4;
 }
 
 /* end of work and education */
@@ -255,10 +258,10 @@ body{
 .resume .resume_right .resume_hobby ul li {
     width: 80px;
     height: 80px;
-    border: 2px solid yellow;
+    border: 2px solid #B55EB4;
     border-radius: 50%;
     position: relative;
-    color: yellow;
+    color: #B55EB4;
 }
   
 .resume .resume_right .resume_hobby ul li i {
@@ -273,7 +276,7 @@ body{
     right: -52px;
     width: 50px;
     height: 2px;
-    background: yellow;
+    background: #B55EB4;
 }
   
 .resume .resume_right .resume_hobby ul li:last-child:before {

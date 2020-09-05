@@ -2,6 +2,15 @@ const calculator = document.querySelector('.calculator')
 const keys = calculator.querySelector('.calculator__keys')
 const display = document.querySelector('.calculator__display')
 
+const calculate = (n1, o, n2) => {
+    const num1 = parseFloat(n1)
+    const num2 = parseFloat(n2)
+    if (o === 'add') return num1 + num2
+    if (o === 'subtract') return num1 - num2
+    if (o === 'multiply') return num1 * num2
+    if (o === 'divide') return num1 / num2
+}
+
 keys.addEventListener('click', x => {
     if (x.target.matches('button')) {
         const key = x.target
@@ -10,22 +19,6 @@ keys.addEventListener('click', x => {
         const displayNum = display.textContent
         const previousKeyType = calculator.dataset.previousKeyType
         Array.from(key.parentNode.children).forEach(k=>k.classList.remove('is-depressed'))
-        
-        const calculate = (n1, o, n2) => {
-            let result = ''
-
-            if (o === 'add') {
-                result = parseFloat(n1) + parseFloat(n2)
-            } else if (o === 'subtract') {
-                result = parseFloat(n1) - parseFloat(n2)
-            } else if (o === 'multiply') {
-                result = parseFloat(n1) * parseFloat(n2)
-            } else if (o === 'divide') {
-                result = parseFloat(n1) / parseFloat(n2)
-            }
-
-            return result
-        }
 
         if (action !== 'clear') {
             const clearButton = calculator.querySelector('[data-action=clear]')
@@ -99,4 +92,3 @@ keys.addEventListener('click', x => {
         }
     }
 })
-
