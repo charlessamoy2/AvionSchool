@@ -1,0 +1,12 @@
+html {
+    list-style-position: inside;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+
+li {
+    line-height: 30px;
+}
