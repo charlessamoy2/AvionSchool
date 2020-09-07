@@ -1,17 +1,17 @@
 const tips = (object) => {
+    let percentage = 0;
     for (i = 0; i<object.bills.length; i++) {
         if (object.bills[i]<500){
-            object.tipAmount.push(object.bills[i]*0.20);
-            object.finalBills.push(object.bills[i]+object.tipAmount[i]);
+            percentage = 0.20;
         }
         if (object.bills[i]>=500 && object.bills[i]<2000){
-            object.tipAmount.push(object.bills[i]*0.15);
-            object.finalBills.push(object.bills[i]+object.tipAmount[i]);
+            percentage = 0.15;
         }
         if (object.bills[i]>=2000){
-            object.tipAmount.push(object.bills[i]*0.10);
-            object.finalBills.push(object.bills[i]+object.tipAmount[i]);
+            percentage = 0.10;
         }
+        object.tipAmount.push(object.bills[i]*percentage);
+        object.finalBills.push(object.bills[i]+object.tipAmount[i]);
     }
     return object;
 }
