@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,400&display=swap');
+
+/* general styling */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    color: #555555;
+    font-size: 16px;
+    position: relative;
+    height: 100vh;
+    font-weight: 400;
+}
+
+.right-side {
+    float: right;
+}
+
+/* .red {
+    color: lightcoral;
+} */
+
+/* top part */
+
+.top-view {
+    height: 40vh;
+    background-image: url(header.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.total_budget {
+    position: absolute;
+    width: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+.top-title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.total-value {
+    font-weight: 300;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+
+/* incomes/expenses */
+.budget_income,
+.budget_expenses {
+    padding: 12px;
+    text-transform: uppercase;   
+}
+
+.budget_income {
+    margin-bottom: 10px;
+    background-color: rgb(15, 179, 15);
+}
+
+.budget_expenses {
+    background-color: lightcoral;
+}
+
+.budget_income_text,
+.budget_expenses_text {
+    float: left;
+    font-size: 14px;
+    color: #555;
+    margin-top: 2px;
+}
+
+.budget_income_value,
+.budget_expenses_value {
+    letter-spacing: 1px;
+    float: left;
+}
+
+/* bottom view */
+
+/* submit stuff */
+.add {
+    padding: 14px;
+    border-bottom: 1px solid rgb(184, 184, 184);
+    background-color: rgb(238, 238, 238);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.add_type,
+.add_description,
+.add_value,
+.add_btn {
+    border: 1px solid rgb(184,184,184);
+    background-color: white;
+    height: 40px;
+    font-weight: 300;
+    border-radius: 3px;
+}
+
+.add_type {
+    width: 50px;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.add_description,
+.add_value {
+    font-size: 14px;
+    padding: 10px 15px;
+    margin-right: 10px;
+}
+
+.add_description {
+    width: 400px;
+}
+
+.add_value {
+    width: 100px;
+}
+
+.add_btn {
+    font-size: 25px;
+    background: none;
+    border: none;
+    color: lightcoral;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.1;
+    margin-left: 5px;
+}
+
+.add_btn:hover {
+    color: rgba(240, 128, 128, 0.80);
+}
+
+.add_btn:active {
+    color: grey;
+}
+
+.add_type:focus,
+.add_description:focus,
+.add_value:focus {
+    outline: none;
+    border: 1px solid rgb(82, 82, 82); 
+}
+
+.add_btn:focus {
+    outline: none;
+    border: none;
+}
+
+/* list items */
+.money_list {
+    width: 1000px;
+    margin: 30px auto;
+}
+
+.income {
+    float: left;
+    width: 475px;
+    margin-right: 50px;
+}
+
+.expenses {
+    float: left;
+    width: 475px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.income_title {
+    color: rgb(15, 179, 15);
+}
+
+.expenses_title {
+    color: lightcoral;
+}
+
+/* list items */
+.item {
+    padding: 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.item:first-child {
+    border-top: 1px solid #dddddd;
+}
+
+.item:nth-child(even) {
+    background-color: rgb(236, 236, 236);
+}
+
+.item_description {
+    float: left;
+}
+
+.item_value {
+    float: left;
+}
+
+.item_delete {
+    float: left;
+}
+
+.item_delete_btn {
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    vertical-align: middle;
+    line-height: 1;
+    margin-left: 10px;
+}
+
+.item_delete_btn:focus {
+    outline:none;
+}
+
+.item_delete_btn:active {
+    color: darkgray;
+}
+
+.item:hover .item_delete_btn{
+    display:inline-block;
+}
+
+.income .item_value,
+.income .item_delete_btn {
+    color: rgb(15, 179, 15);
+}
+
+.expenses .item_value,
+.expenses .item_delete_btn {
+    color: lightcoral;
+}
