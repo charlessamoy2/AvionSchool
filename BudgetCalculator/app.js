@@ -268,12 +268,14 @@ const controller = (function(moneyController,frontendController) {
 
     const changeBorders = function() {
         const queries = document.querySelectorAll(htmlClasses.inputType + ',' + htmlClasses.inputDescription + ',' + htmlClasses.inputValue);
+        const addBtn = document.querySelector(htmlClasses.inputBtn).firstElementChild;
 
         queries.forEach(
             function(current){
                 current.classList.toggle('red');
             }
         );
+        addBtn.classList.toggle('redButton');
     }
 
     return {

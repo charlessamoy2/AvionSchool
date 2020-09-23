@@ -27,6 +27,10 @@ body {
     float: right;
 }
 
+.redButton {
+    color: lightcoral;
+}
+
 .red:focus {
     border: 1px solid lightcoral !important;
 }
@@ -143,7 +147,7 @@ body {
     font-size: 25px;
     background: none;
     border: none;
-    color: lightcoral;
+    color: rgb(15, 179, 15);
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
@@ -152,7 +156,7 @@ body {
 }
 
 .add_btn:hover {
-    color: rgba(240, 128, 128, 0.80);
+    color: rgba(206, 206, 206, 0.582);
 }
 
 .add_btn:active {
