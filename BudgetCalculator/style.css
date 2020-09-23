@@ -27,9 +27,9 @@ body {
     float: right;
 }
 
-/* .red {
-    color: lightcoral;
-} */
+.red:focus {
+    border: 1px solid lightcoral !important;
+}
 
 /* top part */
 
@@ -163,7 +163,7 @@ body {
 .add_description:focus,
 .add_value:focus {
     outline: none;
-    border: 1px solid rgb(82, 82, 82); 
+    border: 1px solid rgb(15, 179, 15); 
 }
 
 .add_btn:focus {

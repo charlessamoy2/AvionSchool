@@ -219,6 +219,7 @@ const controller = (function(moneyController,frontendController) {
             }
         });
         document.querySelector(htmlClasses.moneyList).addEventListener('click',mainDeleteItem);
+        document.querySelector(htmlClasses.inputType).addEventListener('change',changeBorders);
     };
 
     const updateBudget = function () {
@@ -264,6 +265,16 @@ const controller = (function(moneyController,frontendController) {
             updateBudget();
         }
     };
+
+    const changeBorders = function() {
+        const queries = document.querySelectorAll(htmlClasses.inputType + ',' + htmlClasses.inputDescription + ',' + htmlClasses.inputValue);
+
+        queries.forEach(
+            function(current){
+                current.classList.toggle('red');
+            }
+        );
+    }
 
     return {
         init: function() {
