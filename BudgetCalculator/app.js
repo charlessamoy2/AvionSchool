@@ -10,14 +10,6 @@ const Income = function(id, description, value) {
     this.description = description;
     this.value = value;
 }
-
-const calculateTotals = function(type) {
-    let sum = 0;
-    data.allItems[type].forEach(function(i) {
-        sum += i.value;
-    });
-    data.totals[type] = sum;
-}
  
 const data = {
     allItems: {
@@ -29,6 +21,14 @@ const data = {
         inc: 0
     },
     budget: 0,
+}
+
+const calculateTotals = function(type) {
+    let sum = 0;
+    data.allItems[type].forEach(function(i) {
+        sum += i.value;
+    });
+    data.totals[type] = sum;
 }
 
 const moneyController = {
@@ -64,7 +64,7 @@ const moneyController = {
         if (index !== -1) {
             data.allItems[type].splice(index, 1);
         }
-
+        
     },
 
     calculateBudget: function() {
@@ -107,8 +107,10 @@ const formatNumber = function(num, type) {
     result = num.split('.');
 
     int = result[0];
-    if (int.length > 3) {
-        int = int.substr(0,int.length-3) + ',' + int.substr(int.length - 3, 3);
+    if (int.length > 6) {
+        int = int.substr(0,int.length-6) + ',' + int.substr(int.length - 6, 3) + ',' + int.substr(int.length-3,3);
+    } else if (int.length>3) {
+        int = int.substr(0,int.length-3) + ',' + int.substr(int.length-3,3);
     }
 
     dec = result[1];
@@ -174,7 +176,7 @@ const frontendController = {
         fields = document.querySelectorAll(htmlClasses.inputDescription+', '+htmlClasses.inputValue);
         fieldsArr = Array.prototype.slice.call(fields);
 
-        fieldsArr.forEach(function(current,index,array) {
+        fieldsArr.forEach(function(current) {
             current.value = "";
         });
 
@@ -238,10 +240,7 @@ const controller = (function(moneyController,frontendController) {
         if (input.description !== "" && input.value && input.value > 0) {
             newItem = moneyController.addItem(input.type, input.description, input.value);
             frontendController.addListItem(newItem, input.type);
-
             frontendController.clearFields();
-            
-
             updateBudget();
         }
     }
@@ -253,10 +252,9 @@ const controller = (function(moneyController,frontendController) {
 
         if (itemID) {
             splitID = itemID.split('-');
+
             type = splitID[0];
             ID = parseInt(splitID[1]);
-
-            console.log(ID);
 
             moneyController.deleteItem(type,ID);
 
